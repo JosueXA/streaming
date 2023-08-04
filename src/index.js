@@ -1,5 +1,7 @@
 const http = require('./app');
 
-http.listen(2000, () => {
-  console.log('Servidor en el puerto 2000');
+const port = process.env.PORT || 2000;
+
+http.listen(port, () => {
+  console.log(`Aplicación en de desarrollo http://localhost:${port}`);
 });
